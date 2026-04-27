@@ -7,6 +7,12 @@
     tags:
       Application: payment
       Environment: dev
+    # List
+    listTags:
+    - key: Application
+      value: payment
+    - key: Environment
+      value: dev
   tasks:
    - name: defult value for var
      ansible.builtin.debug:
@@ -18,3 +24,6 @@
    - name: dir to map
      ansible.builtin.debug:
       msg: " techs are {{tags | dict2items}}"
+   - name: list to map
+     ansible.builtin.debug:
+      msg: " techs are {{listTags | items2dict}}"
