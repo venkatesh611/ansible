@@ -4,7 +4,7 @@
   tasks:
   - name: printing topics
     ansible.builtin.debug:
-     msg: {{item}}
+     msg: {{ item }}
     loop:
     - linux
     - ansible
