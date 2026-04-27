@@ -4,9 +4,9 @@
   vars:
     technologies: DevOps, Linux, Shell, Ansible # string
   # dictionary == map
-  tags:
-    Application: payment
-    Environment: dev
+    tags:
+      Application: payment
+      Environment: dev
   tasks:
    - name: defult value for var
      ansible.builtin.debug:
@@ -18,4 +18,3 @@
    - name: dir to map
      ansible.builtin.debug:
       msg: " techs are {{tags | dict2items}}"
-      
