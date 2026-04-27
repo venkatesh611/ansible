@@ -11,4 +11,9 @@
     - { name: "nginx", state: "present" }
     - { name: "mysql", state: "absent" }
     - { name: "zip", state: "absent"}
+  - name: start and enable nginx
+    ansible.builtin.service:
+     name: nginx
+     state: started
+     enabled: yes
   
