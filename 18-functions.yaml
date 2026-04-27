@@ -10,4 +10,4 @@
         
    - name: setting default value
      ansible.builtin.debug:
-      msg: " techs are {{technologies | split(,)}}"
+      msg: " techs are {{technologies | split( ',' )}}"
