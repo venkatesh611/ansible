@@ -3,11 +3,19 @@
   connection: local
   vars:
     technologies: DevOps, Linux, Shell, Ansible # string
+  # dictionary == map
+  tags:
+    Application: payment
+    Environment: dev
   tasks:
-   - name: degalt value for var
+   - name: defult value for var
      ansible.builtin.debug:
       msg: "default value: {{name | default('rakesh')}}"
-        
-   - name: setting default value
+     # string to list
+   - name: splitting strings
      ansible.builtin.debug:
       msg: " techs are {{technologies | split( ',' )}}"
+   - name: dir to map
+     ansible.builtin.debug:
+      msg: " techs are {{tags | dict2items}}"
+      
