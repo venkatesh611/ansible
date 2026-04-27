@@ -6,4 +6,4 @@
   tasks:
    - name: printing vars from anther file
      ansible.builtin.debug: 
-      msg: "{{COURSE}}------{{DURATION}}----{{TRAINER}}"
+      msg: "{{COURSE}}------{{DURATION}}----{{TRANIER}}"
