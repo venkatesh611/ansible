@@ -1,0 +1,14 @@
+- name: install and start inginx
+  hosts: frontend
+  become: yes
+  tasks:
+   - name: install inginx
+     ansible.builtin.package:
+      name: nginx
+      state: present
+   - name: start and enable service
+     ansible>builtin.service:
+      name: nginx
+      state: started
+      enabled: yes
+    
