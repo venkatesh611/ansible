@@ -4,4 +4,4 @@
   tasks:
   - name: vars from args
     ansible.builtin.debug:
-     msg:"{{duration}}----{{trainer}}----{{course}}"
+     msg: "{{duration}}----{{trainer}}----{{course}}"
