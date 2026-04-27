@@ -1,0 +1,10 @@
+- name: contions in ansible
+  hosts: local
+  connection: local
+  vars:
+   num: 12
+  tasks: 
+  - name: checking num > 10 or not
+    ansible.builtin.debug:
+     msg: "num {{num}} is > 10"
+    when: num > 10
