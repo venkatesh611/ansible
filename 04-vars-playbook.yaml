@@ -2,10 +2,12 @@
   hosts: local
   connection: local
   vars: 
+  #  play level vars
    COURSE: ANSIBLE
    DURATION: 7DAYS
   tasks: 
    - name: vars printing 
+  #  task level vars
      vars:
       COURSE: DEVOPS
      ansible.builtin.debug:

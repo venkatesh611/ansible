@@ -1,0 +1,9 @@
+- name: vars from anther file
+  hosts: local
+  connection: local
+  vars_files:
+   - vars.yaml
+  tasks:
+   name: printing vars from anther file
+   ansible.builtin.debug: 
+    msg: "{{COURSE}}------{{DURATION}}----{{TRAINER}}"
