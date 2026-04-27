@@ -1,0 +1,17 @@
+- name: datatypes in ansible
+  hosts: local
+  connection: local
+  vars:
+   course: "devops"
+   duration: 120
+   is_alive: true
+   tools:
+    - linux
+    - ansible
+   concepts:
+    cloud: aws
+    cm: ansible
+  tasks:
+   - name: datatypes in ansible
+     ansible.builtin.debug:
+      msg: "course is {{course}}---duration is {{duration}}----is_alive {{is_alive}}--tools {{tools}}---concepts{{concepts}}"
