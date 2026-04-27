@@ -17,13 +17,24 @@
    - name: defult value for var
      ansible.builtin.debug:
       msg: "default value: {{name | default('rakesh')}}"
+
      # string to list
    - name: splitting strings
      ansible.builtin.debug:
       msg: " techs are {{technologies | split( ',' )}}"
+
    - name: dir to map
      ansible.builtin.debug:
       msg: " techs are {{tags | dict2items}}"
+
    - name: list to map
      ansible.builtin.debug:
       msg: " techs are {{listTags | items2dict}}"
+
+      
+   - name: read taml file and take it into a variable
+     ansible.builtin.set_fact:
+      student_yaml: "{{lookup('file','student.yaml')|from_yaml}}"
+   - name: convert yaml into json
+     ansible.builtin.debug:
+      msg: "json: {{ student_yaml | to_json  }}"
