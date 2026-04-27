@@ -1,0 +1,18 @@
+- name: paly-01
+  hosts: frontend
+  tasks:
+   - name: play 1 task 1
+     ansible.builtin.debug:
+      msg: "pay 1 task 1"
+   - name: play 1 task 2
+     ansible.builtin.debug:
+      msg: "play 1 task 2"
+- name: play-02
+  hosts: frontend
+  tasks:
+   - name: play2 task1 
+     ansible.builtin.debug:
+      msg: play2 task 1
+   - name: play2 task2
+     ansible.builtin.debug:
+      msg: "play 2 task2"
