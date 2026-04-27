@@ -1,6 +1,7 @@
 - name: installing nginx server based on os
   hosts: local
   connection: local
+  become: yes
   tasks: 
    - name: installing inginx if redhat
      ansible.builtin.dnf:
