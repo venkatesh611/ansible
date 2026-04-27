@@ -1,0 +1,13 @@
+- name: functions in ansible
+  hosts: local
+  connection: local
+  vars:
+    technologies: DevOps, Linux, Shell, Ansible # string
+  tasks:
+   - name: degalt value for var
+     ansible.builtin.debug:
+      msg: "default value: {{name | default('rakesh')}}"
+        
+   - name: setting default value
+     ansible.builtin.debug:
+      msg: " techs are {{technologies | split(,)}}"
