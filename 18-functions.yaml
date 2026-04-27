@@ -4,7 +4,7 @@
   vars:
     name: "venkat"
     gmail: "venkat@gmail.com"
-    ipaddress: 128.123.12.6
+    ipaddress: 128.123.12897897.6
     technologies: DevOps, Linux, Shell, Ansible # string
   # dictionary == map
     tags:
