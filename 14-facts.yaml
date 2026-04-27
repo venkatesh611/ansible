@@ -6,10 +6,10 @@
      ansible.builtin.dnf:
        name: nginx
        state: latest
-     when: ansible_os_family="RedHat" #use ansible while referring the facts
-     
+     when: ansible_os_family=="RedHat" #use ansible while referring the facts
+
    - name: installing nginx for ubuntu
      ansible.builtin.apt:
        name: nginx
        state: latest
-     when: ansible_os_family="Debain"
+     when: ansible_os_family=="Debain"
