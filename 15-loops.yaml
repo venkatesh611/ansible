@@ -2,9 +2,10 @@
   hosts: local
   connection: local
   tasks:
-   ansible.builtin.debug:
-    msg: {{item}}
-   loop:
-   - linux
-   - ansible
-   - terraform
+  - name: printing topics
+    ansible.builtin.debug:
+     msg: {{item}}
+    loop:
+    - linux
+    - ansible
+    - terraform
