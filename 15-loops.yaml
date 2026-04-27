@@ -1,0 +1,10 @@
+- name: loops in ansible
+  hosts: local
+  connection: local
+  tasks:
+   ansible.builtin.debug:
+    msg: {{item}}
+   loop:
+   - linux
+   - ansible
+   - terraform
